@@ -1,0 +1,170 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+#
+# If you need help with YAML syntax, here are some quick references for you:
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminutes.com/docs/yaml/
+#
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+
+title: Yin Yang U
+subtitle: Cultivating Leadership @ Scale
+email: contact@yyu.org
+logo: yyu_logo_sm.png
+description: >- # this means to ignore newlines until "baseurl:"
+  agency choice beliefs curiosity kindness purpose unity relationship
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+# next two not used by editorial theme, so commenting them out
+# twitter_username: jekyllrb
+# github_username:  jekyll
+
+# Build settings
+theme: jekyll-theme-editorial
+plugins:
+  - jekyll-feed
+
+# Exclude from processing.
+# The following items will not be processed, by default.
+# Any item listed under the `exclude:` key here will be automatically added to
+# the internal "default list".
+#
+# Excluded items can be processed by explicitly listing the directories or
+# their entries' file path in the `include:` list.
+#
+# exclude:
+#   - .sass-cache/
+#   - .jekyll-cache/
+#   - gemfiles/
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules/
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+
+# the following added per Editorial extended tutorial instructions
+# ref: https://www.rubydoc.info/gems/jekyll-theme-editorial/1.0.11
+
+###################
+# Page Defaults
+###################
+defaults:
+  - scope:
+      path:         ""
+    values:
+      layout:       "default"
+      type:         "pages"
+      comments:     false
+      published:    true
+  - scope:
+      path:         ""
+      type:         "posts"
+    values:
+      layout:       "post"
+      menus:        'posts'                   # used by jekyll-menus plugin
+      type:         "posts"
+      body_class:   "post"                    # overrides the class attribute on the html body tag
+      image_path:   "/assets/images/"
+      author_bio:   "<p>We're still working on a fabulous author bio and page. Check back later to learn more!</p>"
+      comments:     false
+      published:    true
+  - scope:
+      path:         ""
+      type:         "pages"
+    values:
+      layout:       "page"
+      type:         "pages"
+      image_path:   "/assets/images/"
+      comments:     false
+      published:    true
+  - scope:
+      path:         ""
+      type:         "people"
+    values:
+      layout:       "author"
+      menus:        'authors'                 # used by jekyll-menus plugin
+      type:         "people"
+      image_path:   "/assets/images/"
+      author_bio:   "<p>We're still working on a fabulous author bio and page. Check back later to learn more!</p>"
+      comments:     false
+      published:    true
+  - scope:
+      path:         ""
+      type:         "projects"
+    values:
+      layout:       "project"
+      menus:        'projects'                # used by jekyll-menus plugin
+      type:         "projects"
+      image_path:   "/assets/images/"
+      comments:     false
+      published:    false
+
+###################
+# Collections
+###################
+collections:
+  pages:
+    output:         true
+
+# single author blogs may want to disable showing the same author everywhere
+show:
+  authors:          false                     # single author blogs may want to disable showing the same author everywhere
+  post_authors:     true                      # you may still want to show the author(s) at the bottom of posts
+  page_authors:     true                      # you may still want to show the author(s) for pages
+  project_authors:  true                      # you may still want to show the author(s) for projects
+  contact:          false                     #
+  search:           false                     # for the gem's search, does not apply to algolio
+  newsletter:       false                     #
+
+###################
+# Jekyll Archives - https://github.com/jekyll/jekyll-archives
+###################
+archives_root:      '/'       # set this to the path prefix for all date-based archives pages, e.g., '/archives'
+jekyll-archives:
+  enabled:          [month, year, categories, tags]
+  layouts:
+    year:           archive
+    month:          archive
+    day:            archive
+    category:       category
+    tag:            tag
+  permalinks:
+    year:           '/:year/'
+    month:          '/:year/:month/'
+    day:            '/:year/:month/:day/'
+    tag:            '/tags/:name/'
+    category:       '/categories/:name/'
+
+###################
+# Collections
+###################
+collections:
+  people:                   # find/put people in `\_people`
+    output:         true
+  pages:
+    output:         true
+  projects:                 # find/put projects in `\_projects`
+    output:         true
+
+# various miscellaneous settings
+include_summary:    [projects]                # collections for which to show the summary in the header
+exclude_dates:      [people, pages]           # collections for which to not show dates in the header
+
+# algolia
+algolia:
+  application_id: 'D67LKHBXG3'
+  index_name: 'yyu'
+  search_only_api_key: '6ef12b2bf8780e5a6d60e09545ac3f40'
