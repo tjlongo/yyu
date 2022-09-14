@@ -1,8 +1,8 @@
 ---
 layout:               home
 body_class:           home
-title:                "Welcome and Introduction"
-subtitle:             " "
+title:                "index.md:title"
+subtitle:             "index.md:subtitle"
 description:          "Yin Yang U is dedicated to continual development of cognitive and emotional abilities, for both personal and social benefit, by mastering beliefs."
 banner:
   url:                "https://www.paypal.com/donate/?business=SS9T34EZ577GJ&no_recurring=0&item_name=Bootstrapping+cclcl.org+and+yyu.org+to+energetically+help+heal+political+divides+and+release+massive+problem+solving+abilities+&currency_code=USD"
