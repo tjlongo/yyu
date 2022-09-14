@@ -165,6 +165,6 @@ exclude_dates:      [people, pages]           # collections for which to not sho
 
 # algolia
 algolia:
-  application_id: 'D67LKHBXG3'
+  application_id: 'CIF9CG1PW2'
   index_name: 'yyu'
-  search_only_api_key: '6ef12b2bf8780e5a6d60e09545ac3f40'
+  search_only_api_key: '5157e86364fb955b60146b9a4501480d'
