@@ -26,9 +26,9 @@ sidebar:
   - url:        /projects
     title:      Projects
     identifier: projects
-#  - url:        /people
-#    title:      Authors
-#    identifier: authors
+  - url:        /people
+    title:      Authors
+    identifier: authors
 #  - url:        /signin
 #    title:      Sign In
 #    identifier: signin
