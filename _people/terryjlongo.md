@@ -11,9 +11,9 @@ images:
   default:
     file:         tjlheadshot.jpg
   banner:
-    file:         tjlheadshot.jpg
-    alt_text:     "Terry J Longo"
-    title:        "Terry J Longo"
+    file:         fam_in_ca_short_landscape.jpg
+    alt_text:     "A picture of Terry and his family with Yosemite valley behind and below them as a backdrop"
+    title:        "Terry and Family at Yosemite"
   alt_text:       "A headshot photo of Terry J Longo"
   title:          "Terry J Longo"
 roles:            [author]

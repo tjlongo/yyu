@@ -121,7 +121,7 @@ collections:
 
 # single author blogs may want to disable showing the same author everywhere
 show:
-  authors:          false                     # single author blogs may want to disable showing the same author everywhere
+  authors:          true                      # single author blogs may want to disable showing the same author everywhere
   post_authors:     true                      # you may still want to show the author(s) at the bottom of posts
   page_authors:     true                      # you may still want to show the author(s) for pages
   project_authors:  true                      # you may still want to show the author(s) for projects

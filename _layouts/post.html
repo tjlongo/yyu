@@ -1,0 +1,36 @@
+---
+layout:           default
+---
+{%-unless page.published == false-%}
+          <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+            {% include post_header.html %}
+            <!-- Post Content -->
+            {% if page.summary or page.excerpt-%}<data class="p-summary" value="{{-page.summary | default: page.excerpt | strip_html | escape-}}" hidden></data>{%-endif %}
+            <section class="e-content" itemprop="articleBody">
+            {%-if page.series %}
+              {% include series.html %}
+            {%-endif %}
+              {{ content }}
+            </section>
+  {% include tags.html %}
+            <hr class="compact"/>
+            {% include post_nav.html-%}
+          {%-if site.show.post_authors and page.author %}
+            {% include authors.html %}
+          {%-endif %}
+          {% if page.comments == true and site.disqus.shortname-%}
+            <hr class="major"/>
+            {% include disqus_comments.html %}
+          {%-elsif page.comments == true-%}
+            <hr class="major"/>
+            {% include comments.html %}
+          {%-else-%}
+            <br>
+          {%-endif %}
+            <a class="u-url" href="{{-page.url | relative_url-}}" hidden></a>
+          </article>
+          {%-if site.lsi-%}{%-assign related_title = "Related Posts"-%}{%-else-%}{%-assign related_title = "Latest Posts"-%}{%-endif-%}
+          {%-if site.posts.size > 2-%}{% include articles.html section_title=related_title article_type='related_posts' %}{%-endif-%}
+{% else-%}
+  {% include 404.html %}
+{% endunless-%}

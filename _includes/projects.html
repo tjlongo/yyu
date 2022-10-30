@@ -1,0 +1,24 @@
+{%-comment-%}
+lists projects as section cards given a projects hash
+
+inputs:
+  projects                the projects to render
+dependencies:
+  site.projects           used as the default if `projects` isn't available already
+  page.layout             used to see if projects should be set to site.projects
+local:
+  projects                default to site.projects if not already provided
+  published_projects      projects filtered for `published==true`
+{%-endcomment-%}
+
+{%-if page.layout == "page"-%}{%-assign projects = site.projects-%}{%-endif-%}
+{%-assign published_projects = projects | where: 'published', true-%}
+
+      {%-if published_projects != empty %}
+        {%-for project in published_projects %}
+          {% include project.html %}
+        {% endfor %}
+      {% else %}
+            <h2>Oof!</h2>
+            <p>It looks like there aren't any published projects here yet. Might you bug the site owner to create one for your look-see?</p>
+      {% endif %}

@@ -2,8 +2,8 @@
 subheader:            "page:subheader"
 layout:               home
 body_class:           home
-title:                "Welcome!"
-subtitle:             "The Yin Yang U Mission Statement"
+title:                "Welcome to Yin Yang U!"
+subtitle:             "Accelerating Intelligence for a Healthier Culture"
 description: >- # this means to ignore newlines until "baseurl:"
   Yin Yang U's mission is to develop (or curate) and continually improve mental models
   that help individuals and groups master their belief systems through elimination of
